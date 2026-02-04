@@ -50,10 +50,6 @@
             this.button18 = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.startbutton = new System.Windows.Forms.Button();
-            this.resetbutton = new System.Windows.Forms.Button();
-            this.stopbutton = new System.Windows.Forms.Button();
-            this.pauzebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button
@@ -238,58 +234,15 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // startbutton
-            // 
-            this.startbutton.Location = new System.Drawing.Point(182, 66);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(85, 32);
-            this.startbutton.TabIndex = 24;
-            this.startbutton.Text = "start";
-            this.startbutton.UseVisualStyleBackColor = true;
-            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
-            // 
-            // resetbutton
-            // 
-            this.resetbutton.Location = new System.Drawing.Point(83, 104);
-            this.resetbutton.Name = "resetbutton";
-            this.resetbutton.Size = new System.Drawing.Size(85, 40);
-            this.resetbutton.TabIndex = 25;
-            this.resetbutton.Text = "reset";
-            this.resetbutton.UseVisualStyleBackColor = true;
-            this.resetbutton.Click += new System.EventHandler(this.resetbutton_Click);
-            // 
-            // stopbutton
-            // 
-            this.stopbutton.Location = new System.Drawing.Point(78, 66);
-            this.stopbutton.Name = "stopbutton";
-            this.stopbutton.Size = new System.Drawing.Size(90, 32);
-            this.stopbutton.TabIndex = 26;
-            this.stopbutton.Text = "stop";
-            this.stopbutton.UseVisualStyleBackColor = true;
-            this.stopbutton.Click += new System.EventHandler(this.stopbutton_Click);
-            // 
-            // pauzebutton
-            // 
-            this.pauzebutton.Location = new System.Drawing.Point(182, 105);
-            this.pauzebutton.Name = "pauzebutton";
-            this.pauzebutton.Size = new System.Drawing.Size(90, 40);
-            this.pauzebutton.TabIndex = 27;
-            this.pauzebutton.Text = "pauze";
-            this.pauzebutton.UseVisualStyleBackColor = true;
-            this.pauzebutton.Click += new System.EventHandler(this.pauzebutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pauzebutton);
-            this.Controls.Add(this.stopbutton);
-            this.Controls.Add(this.resetbutton);
-            this.Controls.Add(this.startbutton);
             this.Controls.Add(this.timer);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -340,10 +293,6 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Label timer;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button startbutton;
-        private System.Windows.Forms.Button resetbutton;
-        private System.Windows.Forms.Button stopbutton;
-        private System.Windows.Forms.Button pauzebutton;
     }
 }
 

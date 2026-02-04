@@ -14,7 +14,7 @@ namespace memorieproject
     {
         private int totalSeconds = 0;
         private const int TIMER_INTERVAL = 1; // << change: increment in seconds per Tick
-        Random random = new Random();
+        private static readonly Random random = new Random();
 
 
         public Form1()
@@ -47,6 +47,33 @@ namespace memorieproject
             totalSeconds += TIMER_INTERVAL;
             UpdateTimeLabel();
             timer1.Enabled = true;
+        }
+
+        private void startbutton_Click(object sender, EventArgs e)
+        {
+            if (!timer1.Enabled)
+            {
+                timer1.Start();
+            }
+        }
+
+        private void resetbutton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            totalSeconds = 0;
+
+            UpdateTimeLabel();
+        }
+
+        private void stopbutton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+        }
+
+        private void pauzebutton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }

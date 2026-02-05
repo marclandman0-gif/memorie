@@ -31,8 +31,11 @@ namespace memorieproject
             AssignIconsToSquares();
         }
 
-        private void label(object sender, EventArgs e)
+        private void label_Click(object sender, EventArgs e)
         {
+            if (firstClicked != null && secondClicked != null)
+                return;
+
             Label clickedLabel = sender as Label;
 
             if (clickedLabel == null)
@@ -50,6 +53,42 @@ namespace memorieproject
 
             secondClicked = clickedLabel;
             secondClicked.ForeColor = Color.Black;
+
+            CheckerForWinner();
+
+            if (firstClicked.Text == secondClicked.Text)
+            {
+                firstClicked = null;
+                secondClicked = null;
+                return;
+            }
+            else
+                timer2.Start();
+        }
+
+        private void CheckerForWinner()
+        {
+            Label label;
+            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
+            {
+               label = tableLayoutPanel1.Controls[i] as Label;
+
+                if (label != null && label.ForeColor == label.BackColor)
+                    return;
+            }
+            MessageBox.Show ("You matched all the icons!", "Congratulations");
+            Close();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop();
+
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+
+            firstClicked = null;
+            secondClicked = null;
         }
 
         private void AssignIconsToSquares()

@@ -14,40 +14,64 @@ namespace memorieproject
     {
         private int totalSeconds = 0;
         private const int TIMER_INTERVAL = 1; // << change: increment in seconds per Tick
-        private static readonly Random random = new Random();
+        Random random = new Random();
 
+        List<string> icons = new List<string>()
+        {
+        "%", "%", "Q", "Q", "S", "S", "m", "m" ,"*", "*", 
+        "n", "n", "!", "!", "(", "(", "C", "C"
+        };
+
+        Label firstClicked, secondClicked;
+        
 
         public Form1()
         {
             InitializeComponent();
+            AssignIconsToSquares();
         }
 
-
-        private void Button_click(object sender, EventArgs e)
+        private void label(object sender, EventArgs e)
         {
-            Button butt = sender as Button;
-            butt.BackColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel == null)
+                return;
+
+            if (clickedLabel.ForeColor == Color.Black)
+                return;
+
+            if (firstClicked == null)
+            {
+                firstClicked = clickedLabel;
+                firstClicked.ForeColor = Color.Black;
+                return;
+            }
+
+            secondClicked = clickedLabel;
+            secondClicked.ForeColor = Color.Black;
         }
 
-        private void score_Click(object sender, EventArgs e)
+        private void AssignIconsToSquares()
         {
+           Label label;
+            int randomNumber;
 
+
+            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
+            { 
+                if (tableLayoutPanel1.Controls[i] is Label)
+                    label = (Label)tableLayoutPanel1.Controls[i];
+
+                else
+                    continue;
+
+                randomNumber = random.Next(0, icons.Count);
+                label.Text = icons[randomNumber];
+
+                icons.RemoveAt(randomNumber);
+
+            }
         }
-
-        private void UpdateTimeLabel()
-        {
-            int minutes = totalSeconds / 60;
-            int seconds = totalSeconds % 60;
-
-            timer.Text = minutes.ToString("00") + ":" + seconds.ToString("00");
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            totalSeconds += TIMER_INTERVAL;
-            UpdateTimeLabel();
-            timer1.Enabled = true;
-        }
-
     }
 }

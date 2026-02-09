@@ -7,14 +7,12 @@ namespace memorieproject
 {
     public partial class Form1 : Form
     {
-        // Houdt bij hoeveel seconden zijn verstreken (wordt hier nog niet gebruikt)
         private int totalSeconds = 0;
-
-        // Interval voor een timer (1 seconde per tick)
         private const int TIMER_INTERVAL = 1;
-
-        // Random object om willekeurige iconen te kiezen
         Random random = new Random();
+        private int beurten = 0;
+        private int correctguess = 0;
+        private int wrongguess = 0;
 
         // Lijst met iconen (elk icoon komt twee keer voor)
         List<string> icons = new List<string>()
@@ -64,7 +62,8 @@ namespace memorieproject
             // Tweede kaart aanklikken
             secondClicked = clickedLabel;
             secondClicked.ForeColor = Color.Black;
-
+            beurten++;
+            lbl_beurten.Text = "Beurten: " + beurten;
             // Check of alle paren gevonden zijn
             CheckerForWinner();
 
@@ -73,12 +72,16 @@ namespace memorieproject
             {
                 firstClicked = null;
                 secondClicked = null;
+                correctguess++;
+                lbl_correctguessed.Text = "Correct: " + correctguess;
                 return;
             }
             else
             {
                 // Start timer om kaarten weer te verbergen
                 timer2.Start();
+                wrongguess++;
+                lbl_wrongguessed.Text = "Wrong: " + wrongguess;
             }
         }
 
@@ -115,6 +118,8 @@ namespace memorieproject
             firstClicked = null;
             secondClicked = null;
         }
+
+
 
         // Verdeelt de iconen willekeurig over de labels
         private void AssignIconsToSquares()

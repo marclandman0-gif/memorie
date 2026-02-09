@@ -8,11 +8,13 @@ namespace memorieproject
     public partial class Form1 : Form
     {
         private int totalSeconds = 0;
+        private int totalMinutes = 0;
         private const int TIMER_INTERVAL = 1;
         Random random = new Random();
         private int beurten = 0;
-        private int correctguess = 0;
-        private int wrongguess = 0;
+        private int correctGuess = 0;
+        private int wrongGuess = 0;
+        private bool firstklick = false;
 
         // Lijst met iconen (elk icoon komt twee keer voor)
         List<string> icons = new List<string>()
@@ -54,9 +56,20 @@ namespace memorieproject
             // Eerste kaart aanklikken
             if (firstClicked == null)
             {
-                firstClicked = clickedLabel;
+                if(firstklick == false)
+                {
+                    Timer_Show.Start();
+                    firstklick = true;
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black; // Maak het icoon zichtbaar
+                    return;
+                }
+                else 
+                { 
+                    firstClicked = clickedLabel;
                 firstClicked.ForeColor = Color.Black; // Maak het icoon zichtbaar
                 return;
+                }
             }
 
             // Tweede kaart aanklikken
@@ -70,18 +83,18 @@ namespace memorieproject
             // Als de iconen gelijk zijn → paar gevonden
             if (firstClicked.Text == secondClicked.Text)
             {
-                firstClicked = null;
+                firstClicked = null;    
                 secondClicked = null;
-                correctguess++;
-                lbl_correctguessed.Text = "Correct: " + correctguess;
+                correctGuess++;
+                lbl_correctguessed.Text = "Correct: " + correctGuess;
                 return;
             }
             else
             {
                 // Start timer om kaarten weer te verbergen
                 timer2.Start();
-                wrongguess++;
-                lbl_wrongguessed.Text = "Wrong: " + wrongguess;
+                wrongGuess++;
+                lbl_wrongguessed.Text = "Wrong: " + wrongGuess;
             }
         }
 
@@ -98,6 +111,7 @@ namespace memorieproject
                 // Als er nog een verborgen kaart is → nog niet gewonnen
                 if (label != null && label.ForeColor == label.BackColor)
                     return;
+                Timer_Show.Stop();
             }
 
             // Alle kaarten zijn gevonden → speler wint
@@ -117,6 +131,19 @@ namespace memorieproject
             // Reset de geselecteerde kaarten
             firstClicked = null;
             secondClicked = null;
+        }
+
+        private void Timer_Show_Tick(object sender, EventArgs e)
+        {
+            totalSeconds++;
+
+            if (totalSeconds == 60)
+            {
+                totalSeconds = 0;
+                totalMinutes++;
+            }
+
+            lbl_Timer.Text = "Time Taken: " + totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00");
         }
 
 

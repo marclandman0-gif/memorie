@@ -30,28 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.Kaart1 = new System.Windows.Forms.Label();
+            this.Kaart2 = new System.Windows.Forms.Label();
+            this.Kaart3 = new System.Windows.Forms.Label();
+            this.Kaart4 = new System.Windows.Forms.Label();
+            this.Kaart5 = new System.Windows.Forms.Label();
+            this.Kaart6 = new System.Windows.Forms.Label();
+            this.Kaart12 = new System.Windows.Forms.Label();
+            this.Kaart11 = new System.Windows.Forms.Label();
+            this.Kaart10 = new System.Windows.Forms.Label();
+            this.Kaart9 = new System.Windows.Forms.Label();
+            this.Kaart8 = new System.Windows.Forms.Label();
+            this.Kaart7 = new System.Windows.Forms.Label();
+            this.Kaart13 = new System.Windows.Forms.Label();
+            this.Kaart14 = new System.Windows.Forms.Label();
+            this.Kaart15 = new System.Windows.Forms.Label();
+            this.Kaart16 = new System.Windows.Forms.Label();
+            this.Kaart17 = new System.Windows.Forms.Label();
+            this.Kaart18 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lbl_beurten = new System.Windows.Forms.Label();
             this.lbl_correctguessed = new System.Windows.Forms.Label();
             this.lbl_wrongguessed = new System.Windows.Forms.Label();
+            this.Timer_Show = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Timer = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,24 +68,24 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.29103F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.38796F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.72241F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label17, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label18, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart5, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart6, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart12, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart11, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart10, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart9, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart8, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart7, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart13, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart14, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart15, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart16, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart17, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Kaart18, 5, 2);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 91);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -96,221 +98,221 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(899, 491);
             this.tableLayoutPanel1.TabIndex = 24;
             // 
-            // label1
+            // Kaart1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.Location = new System.Drawing.Point(5, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 161);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "%";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label_Click);
+            this.Kaart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart1.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart1.Location = new System.Drawing.Point(5, 2);
+            this.Kaart1.Name = "Kaart1";
+            this.Kaart1.Size = new System.Drawing.Size(151, 161);
+            this.Kaart1.TabIndex = 0;
+            this.Kaart1.Text = "%";
+            this.Kaart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart1.Click += new System.EventHandler(this.label_Click);
             // 
-            // label2
+            // Kaart2
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label2.Location = new System.Drawing.Point(164, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 161);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Q";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label_Click);
+            this.Kaart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart2.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart2.Location = new System.Drawing.Point(164, 2);
+            this.Kaart2.Name = "Kaart2";
+            this.Kaart2.Size = new System.Drawing.Size(138, 161);
+            this.Kaart2.TabIndex = 1;
+            this.Kaart2.Text = "Q";
+            this.Kaart2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart2.Click += new System.EventHandler(this.label_Click);
             // 
-            // label3
+            // Kaart3
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label3.Location = new System.Drawing.Point(310, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 161);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "S";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label_Click);
+            this.Kaart3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart3.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart3.Location = new System.Drawing.Point(310, 2);
+            this.Kaart3.Name = "Kaart3";
+            this.Kaart3.Size = new System.Drawing.Size(138, 161);
+            this.Kaart3.TabIndex = 2;
+            this.Kaart3.Text = "S";
+            this.Kaart3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart3.Click += new System.EventHandler(this.label_Click);
             // 
-            // label4
+            // Kaart4
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label4.Location = new System.Drawing.Point(456, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 161);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "m";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label_Click);
+            this.Kaart4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart4.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart4.Location = new System.Drawing.Point(456, 2);
+            this.Kaart4.Name = "Kaart4";
+            this.Kaart4.Size = new System.Drawing.Size(138, 161);
+            this.Kaart4.TabIndex = 3;
+            this.Kaart4.Text = "m";
+            this.Kaart4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart4.Click += new System.EventHandler(this.label_Click);
             // 
-            // label13
+            // Kaart5
             // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label13.Location = new System.Drawing.Point(602, 2);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 161);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Q";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label13.Click += new System.EventHandler(this.label_Click);
+            this.Kaart5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart5.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart5.Location = new System.Drawing.Point(602, 2);
+            this.Kaart5.Name = "Kaart5";
+            this.Kaart5.Size = new System.Drawing.Size(139, 161);
+            this.Kaart5.TabIndex = 12;
+            this.Kaart5.Text = "Q";
+            this.Kaart5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart5.Click += new System.EventHandler(this.label_Click);
             // 
-            // label14
+            // Kaart6
             // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label14.Location = new System.Drawing.Point(749, 2);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 161);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "*";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label_Click);
+            this.Kaart6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart6.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart6.Location = new System.Drawing.Point(749, 2);
+            this.Kaart6.Name = "Kaart6";
+            this.Kaart6.Size = new System.Drawing.Size(145, 161);
+            this.Kaart6.TabIndex = 13;
+            this.Kaart6.Text = "*";
+            this.Kaart6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart6.Click += new System.EventHandler(this.label_Click);
             // 
-            // label16
+            // Kaart12
             // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label16.Location = new System.Drawing.Point(749, 165);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(145, 161);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "(";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label16.Click += new System.EventHandler(this.label_Click);
+            this.Kaart12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart12.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart12.Location = new System.Drawing.Point(749, 165);
+            this.Kaart12.Name = "Kaart12";
+            this.Kaart12.Size = new System.Drawing.Size(145, 161);
+            this.Kaart12.TabIndex = 15;
+            this.Kaart12.Text = "(";
+            this.Kaart12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart12.Click += new System.EventHandler(this.label_Click);
             // 
-            // label15
+            // Kaart11
             // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label15.Location = new System.Drawing.Point(602, 165);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(139, 161);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "m";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label15.Click += new System.EventHandler(this.label_Click);
+            this.Kaart11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart11.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart11.Location = new System.Drawing.Point(602, 165);
+            this.Kaart11.Name = "Kaart11";
+            this.Kaart11.Size = new System.Drawing.Size(139, 161);
+            this.Kaart11.TabIndex = 14;
+            this.Kaart11.Text = "m";
+            this.Kaart11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart11.Click += new System.EventHandler(this.label_Click);
             // 
-            // label8
+            // Kaart10
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label8.Location = new System.Drawing.Point(456, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 161);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "n";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label_Click);
+            this.Kaart10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart10.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart10.Location = new System.Drawing.Point(456, 165);
+            this.Kaart10.Name = "Kaart10";
+            this.Kaart10.Size = new System.Drawing.Size(138, 161);
+            this.Kaart10.TabIndex = 7;
+            this.Kaart10.Text = "n";
+            this.Kaart10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart10.Click += new System.EventHandler(this.label_Click);
             // 
-            // label7
+            // Kaart9
             // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label7.Location = new System.Drawing.Point(310, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 161);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "!";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label_Click);
+            this.Kaart9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart9.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart9.Location = new System.Drawing.Point(310, 165);
+            this.Kaart9.Name = "Kaart9";
+            this.Kaart9.Size = new System.Drawing.Size(138, 161);
+            this.Kaart9.TabIndex = 6;
+            this.Kaart9.Text = "!";
+            this.Kaart9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart9.Click += new System.EventHandler(this.label_Click);
             // 
-            // label6
+            // Kaart8
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label6.Location = new System.Drawing.Point(164, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 161);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label_Click);
+            this.Kaart8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart8.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart8.Location = new System.Drawing.Point(164, 165);
+            this.Kaart8.Name = "Kaart8";
+            this.Kaart8.Size = new System.Drawing.Size(138, 161);
+            this.Kaart8.TabIndex = 5;
+            this.Kaart8.Text = "n";
+            this.Kaart8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart8.Click += new System.EventHandler(this.label_Click);
             // 
-            // label5
+            // Kaart7
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label5.Location = new System.Drawing.Point(5, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 161);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "S";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label_Click);
+            this.Kaart7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart7.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart7.Location = new System.Drawing.Point(5, 165);
+            this.Kaart7.Name = "Kaart7";
+            this.Kaart7.Size = new System.Drawing.Size(151, 161);
+            this.Kaart7.TabIndex = 4;
+            this.Kaart7.Text = "S";
+            this.Kaart7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart7.Click += new System.EventHandler(this.label_Click);
             // 
-            // label9
+            // Kaart13
             // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label9.Location = new System.Drawing.Point(5, 328);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 161);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "(";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label_Click);
+            this.Kaart13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart13.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart13.Location = new System.Drawing.Point(5, 328);
+            this.Kaart13.Name = "Kaart13";
+            this.Kaart13.Size = new System.Drawing.Size(151, 161);
+            this.Kaart13.TabIndex = 8;
+            this.Kaart13.Text = "(";
+            this.Kaart13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart13.Click += new System.EventHandler(this.label_Click);
             // 
-            // label10
+            // Kaart14
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label10.Location = new System.Drawing.Point(164, 328);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 161);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "!";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label_Click);
+            this.Kaart14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart14.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart14.Location = new System.Drawing.Point(164, 328);
+            this.Kaart14.Name = "Kaart14";
+            this.Kaart14.Size = new System.Drawing.Size(138, 161);
+            this.Kaart14.TabIndex = 9;
+            this.Kaart14.Text = "!";
+            this.Kaart14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart14.Click += new System.EventHandler(this.label_Click);
             // 
-            // label11
+            // Kaart15
             // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label11.Location = new System.Drawing.Point(310, 328);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 161);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "%";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label_Click);
+            this.Kaart15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart15.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart15.Location = new System.Drawing.Point(310, 328);
+            this.Kaart15.Name = "Kaart15";
+            this.Kaart15.Size = new System.Drawing.Size(138, 161);
+            this.Kaart15.TabIndex = 10;
+            this.Kaart15.Text = "%";
+            this.Kaart15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart15.Click += new System.EventHandler(this.label_Click);
             // 
-            // label12
+            // Kaart16
             // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label12.Location = new System.Drawing.Point(456, 328);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 161);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "C";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label_Click);
+            this.Kaart16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart16.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart16.Location = new System.Drawing.Point(456, 328);
+            this.Kaart16.Name = "Kaart16";
+            this.Kaart16.Size = new System.Drawing.Size(138, 161);
+            this.Kaart16.TabIndex = 11;
+            this.Kaart16.Text = "C";
+            this.Kaart16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart16.Click += new System.EventHandler(this.label_Click);
             // 
-            // label17
+            // Kaart17
             // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label17.Location = new System.Drawing.Point(602, 328);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(139, 161);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "C";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label17.Click += new System.EventHandler(this.label_Click);
+            this.Kaart17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart17.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart17.Location = new System.Drawing.Point(602, 328);
+            this.Kaart17.Name = "Kaart17";
+            this.Kaart17.Size = new System.Drawing.Size(139, 161);
+            this.Kaart17.TabIndex = 16;
+            this.Kaart17.Text = "C";
+            this.Kaart17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart17.Click += new System.EventHandler(this.label_Click);
             // 
-            // label18
+            // Kaart18
             // 
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label18.Location = new System.Drawing.Point(749, 328);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(145, 161);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "*";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label18.Click += new System.EventHandler(this.label_Click);
+            this.Kaart18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Kaart18.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Kaart18.Location = new System.Drawing.Point(749, 328);
+            this.Kaart18.Name = "Kaart18";
+            this.Kaart18.Size = new System.Drawing.Size(145, 161);
+            this.Kaart18.TabIndex = 17;
+            this.Kaart18.Text = "*";
+            this.Kaart18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Kaart18.Click += new System.EventHandler(this.label_Click);
             // 
             // timer2
             // 
@@ -344,11 +346,26 @@
             this.lbl_wrongguessed.TabIndex = 27;
             this.lbl_wrongguessed.Text = "Wrong:0";
             // 
+            // Timer_Show
+            // 
+            this.Timer_Show.Interval = 1000;
+            this.Timer_Show.Tick += new System.EventHandler(this.Timer_Show_Tick);
+            // 
+            // lbl_Timer
+            // 
+            this.lbl_Timer.AutoSize = true;
+            this.lbl_Timer.Location = new System.Drawing.Point(776, 9);
+            this.lbl_Timer.Name = "lbl_Timer";
+            this.lbl_Timer.Size = new System.Drawing.Size(117, 16);
+            this.lbl_Timer.TabIndex = 28;
+            this.lbl_Timer.Text = "Time Taken: 00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 583);
+            this.Controls.Add(this.lbl_Timer);
             this.Controls.Add(this.lbl_wrongguessed);
             this.Controls.Add(this.lbl_correctguessed);
             this.Controls.Add(this.lbl_beurten);
@@ -364,28 +381,30 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Kaart1;
+        private System.Windows.Forms.Label Kaart2;
+        private System.Windows.Forms.Label Kaart3;
+        private System.Windows.Forms.Label Kaart4;
+        private System.Windows.Forms.Label Kaart5;
+        private System.Windows.Forms.Label Kaart6;
+        private System.Windows.Forms.Label Kaart12;
+        private System.Windows.Forms.Label Kaart11;
+        private System.Windows.Forms.Label Kaart10;
+        private System.Windows.Forms.Label Kaart9;
+        private System.Windows.Forms.Label Kaart8;
+        private System.Windows.Forms.Label Kaart7;
+        private System.Windows.Forms.Label Kaart13;
+        private System.Windows.Forms.Label Kaart14;
+        private System.Windows.Forms.Label Kaart15;
+        private System.Windows.Forms.Label Kaart16;
+        private System.Windows.Forms.Label Kaart17;
+        private System.Windows.Forms.Label Kaart18;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label lbl_beurten;
         private System.Windows.Forms.Label lbl_correctguessed;
         private System.Windows.Forms.Label lbl_wrongguessed;
+        private System.Windows.Forms.Timer Timer_Show;
+        private System.Windows.Forms.Label lbl_Timer;
     }
 }
 

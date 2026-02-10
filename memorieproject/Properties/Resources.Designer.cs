@@ -61,32 +61,38 @@ namespace memorieproject.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static byte[] fail {
+        internal static System.IO.UnmanagedMemoryStream achtergrondmuziek {
             get {
-                object obj = ResourceManager.GetObject("fail", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetStream("achtergrondmuziek", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static byte[] score {
+        internal static System.IO.UnmanagedMemoryStream card_swap_sound {
             get {
-                object obj = ResourceManager.GetObject("score", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetStream("card_swap_sound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static byte[] swap {
+        internal static System.IO.UnmanagedMemoryStream fail_sound {
             get {
-                object obj = ResourceManager.GetObject("swap", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetStream("fail_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream score_sound {
+            get {
+                return ResourceManager.GetStream("score_sound", resourceCulture);
             }
         }
     }

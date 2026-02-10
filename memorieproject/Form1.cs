@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace memorieproject
@@ -15,6 +16,8 @@ namespace memorieproject
         private int correctGuess = 0;
         private int wrongGuess = 0;
         private bool firstklick = false;
+        SoundPlayer sp = new SoundPlayer();
+
 
         // Lijst met iconen (elk icoon komt twee keer voor)
         List<string> icons = new List<string>()
@@ -61,19 +64,29 @@ namespace memorieproject
                     Timer_Show.Start();
                     firstklick = true;
                     firstClicked = clickedLabel;
+
+                    sp.Stream = Properties.Resources.card_swap_sound;
+                    sp.Play();
+
                     firstClicked.ForeColor = Color.Black; // Maak het icoon zichtbaar
                     return;
                 }
                 else 
                 { 
                     firstClicked = clickedLabel;
-                firstClicked.ForeColor = Color.Black; // Maak het icoon zichtbaar
+
+                    sp.Stream = Properties.Resources.card_swap_sound;
+                    sp.Play();
+
+                    firstClicked.ForeColor = Color.Black; // Maak het icoon zichtbaar
                 return;
                 }
             }
 
             // Tweede kaart aanklikken
             secondClicked = clickedLabel;
+            sp.Stream = Properties.Resources.card_swap_sound;
+            sp.Play();
             secondClicked.ForeColor = Color.Black;
             beurten++;
             lbl_beurten.Text = "Beurten: " + beurten;
@@ -85,9 +98,16 @@ namespace memorieproject
             {
                 firstClicked = null;    
                 secondClicked = null;
-                correctGuess++;
+                correctGuess++;                
+                
+                sp.Stream = Properties.Resources.score_sound;
+                sp.Play();
+                
                 lbl_correctguessed.Text = "Correct: " + correctGuess;
+                
+
                 return;
+
             }
             else
             {
@@ -97,7 +117,6 @@ namespace memorieproject
                 lbl_wrongguessed.Text = "Wrong: " + wrongGuess;
             }
         }
-
         // Controleert of alle iconen zichtbaar zijn
         private void CheckerForWinner()
         {
@@ -107,14 +126,13 @@ namespace memorieproject
             for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
             {
                 label = tableLayoutPanel1.Controls[i] as Label;
-
                 // Als er nog een verborgen kaart is → nog niet gewonnen
                 if (label != null && label.ForeColor == label.BackColor)
                     return;
-                Timer_Show.Stop();
             }
 
             // Alle kaarten zijn gevonden → speler wint
+            Timer_Show.Stop();
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
         }
@@ -128,9 +146,15 @@ namespace memorieproject
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
 
+            sp.Stream = Properties.Resources.fail_sound;
+            sp.Play();
+
             // Reset de geselecteerde kaarten
             firstClicked = null;
             secondClicked = null;
+
+
+
         }
 
         private void Timer_Show_Tick(object sender, EventArgs e)
@@ -144,6 +168,12 @@ namespace memorieproject
             }
 
             lbl_Timer.Text = "Time Taken: " + totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            sp.Stream = Properties.Resources.achtergrondmuziek;
+            sp.Play();
         }
 
 

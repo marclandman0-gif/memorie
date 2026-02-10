@@ -89,5 +89,17 @@
   <ItemGroup>
     <None Include="Resources\u_8g40a9z0la-fail-234710.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card swap sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\achtergrondmuziek.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

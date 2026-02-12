@@ -63,15 +63,6 @@ namespace memorieproject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream achtergrondmuziek {
-            get {
-                return ResourceManager.GetStream("achtergrondmuziek", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream card_swap_sound {
             get {
                 return ResourceManager.GetStream("card_swap_sound", resourceCulture);

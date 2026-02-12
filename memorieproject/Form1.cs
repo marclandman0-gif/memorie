@@ -170,12 +170,6 @@ namespace memorieproject
             lbl_Timer.Text = "Time Taken: " + totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            sp.Stream = Properties.Resources.achtergrondmuziek;
-            sp.Play();
-        }
-
 
 
         // Verdeelt de iconen willekeurig over de labels

@@ -173,6 +173,7 @@ namespace memorieproject
 
 
         // Verdeelt de iconen willekeurig over de labels
+
         private void AssignIconsToSquares()
         {
             Label label;

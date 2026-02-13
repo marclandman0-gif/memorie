@@ -93,7 +93,7 @@ namespace memorieproject
             // Check of alle paren gevonden zijn
             CheckerForWinner();
 
-            // Als de iconen gelijk zijn → paar gevonden
+            // Als de iconen gelijk zijn = paar gevonden
             if (firstClicked.Text == secondClicked.Text)
             {
                 firstClicked = null;    

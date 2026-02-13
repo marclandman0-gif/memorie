@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace memorieproject
 {
-    public partial class Form1 : Form
+    public partial class Memorie : Form
     {
         private int totalSeconds = 0;
         private int totalMinutes = 0;
@@ -30,7 +30,7 @@ namespace memorieproject
         // Labels die onthouden welke kaarten zijn aangeklikt
         Label firstClicked, secondClicked;
 
-        public Form1()
+        public Memorie()
         {
             InitializeComponent();
 
@@ -169,6 +169,8 @@ namespace memorieproject
 
             lbl_Timer.Text = "Time Taken: " + totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00");
         }
+
+
 
 
 
